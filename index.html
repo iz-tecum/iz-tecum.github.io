@@ -357,6 +357,8 @@
       font-size: 1.04rem;
       font-weight: 600;
       line-height: 1.35;
+      overflow-wrap: break-word;
+      text-wrap: pretty;
     }
 
     .paper-pdf {
@@ -379,6 +381,18 @@
     .paper-pdf--pending {
       white-space: nowrap;
       opacity: 0.65;
+    }
+
+    .paper-group + .paper-group {
+      margin-top: 2.8rem;
+    }
+
+    .paper-empty {
+      margin: 0;
+      padding: 0.9rem 0;
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      color: var(--muted);
     }
 
     .math-figure {
@@ -637,7 +651,7 @@
 
           <img
             class="portrait"
-            src="https://iz-tecum.github.io/assets/iz-tecum.jpeg"
+            src="https://iz-tecum.github.io/iz-tecum.jpeg"
             alt="Portrait of Iz Tecúm"
             width="1965"
             height="2598"
@@ -670,83 +684,132 @@
       <section class="tab-panel" id="panel-papers" data-panel="papers" hidden>
         <header class="page-intro">
           <div>
-            <p class="eyebrow">Research</p>
-            <h1>Papers &amp; notes</h1>
+            <p class="eyebrow">Selected work</p>
+            <h1>Research, notes &amp; projects</h1>
           </div>
         </header>
 
-        <ul class="paper-list">
-          <li class="paper-item">
-            <span class="paper-title">Coupling Bounds for Glauber Colorings</span>
-            <a class="paper-pdf" href="https://iz-tecum.github.io/research/pdfs/research-3-draft.pdf" aria-label="PDF: Coupling Bounds for Glauber Colorings">PDF</a>
-          </li>
-          <li class="paper-item">
-            <span class="paper-title">Quantitatively Controlled Holomorphic Maps</span>
-            <a class="paper-pdf" href="https://iz-tecum.github.io/research/pdfs/research-2-draft.pdf" aria-label="PDF: Quantitatively Controlled Holomorphic Maps">PDF</a>
-          </li>
-          <li class="paper-item">
-            <span class="paper-title">Conway Mutation and the Jones Unknot Problem</span>
-            <a class="paper-pdf" href="https://iz-tecum.github.io/research/pdfs/research-1-draft.pdf" aria-label="PDF: Conway Mutation and the Jones Unknot Problem">PDF</a>
-          </li>
-          <li class="paper-item">
-            <span class="paper-title">Random Euler-Product Surrogates</span>
-            <a class="paper-pdf" href="https://iz-tecum.github.io/research/pdfs/research-4-draft.pdf" aria-label="PDF: Random Euler-Product Surrogates">PDF</a>
-          </li>
-          <li class="paper-item">
-            <span class="paper-title">Notes for the Fourier Transform on R</span>
-            <a class="paper-pdf" href="https://iz-tecum.github.io/research/pdfs/research-5-draft.pdf" aria-label="PDF: Notes for the Fourier Transform on R">PDF</a>
-          </li>
+        <section class="paper-group" aria-labelledby="research-heading">
+          <h2 class="section-title" id="research-heading">Research</h2>
+          <ul class="paper-list">
+            <li class="paper-item">
+              <span class="paper-title">A Central Limit Theorem for Random Euler-Product Surrogates</span>
+              <a class="paper-pdf" href="research/CLM.pdf" aria-label="PDF: A Central Limit Theorem for Random Euler-Product Surrogates">PDF</a>
+            </li>
+            <li class="paper-item">
+              <span class="paper-title">How the Conformal Modulus of an Annulus Controls Holomorphic Maps</span>
+              <a class="paper-pdf" href="research/CM.pdf" aria-label="PDF: How the Conformal Modulus of an Annulus Controls Holomorphic Maps">PDF</a>
+            </li>
+            <li class="paper-item">
+              <span class="paper-title">Rainbow Normal Forms and the L-Space Property of One-Rainbow Knots</span>
+              <a class="paper-pdf" href="research/ORL.pdf" aria-label="PDF: Rainbow Normal Forms and the L-Space Property of One-Rainbow Knots">PDF</a>
+            </li>
+            <li class="paper-item">
+              <span class="paper-title">Classical vs Path Coupling on a Geometric State Space</span>
+              <a class="paper-pdf" href="research/PC.pdf" aria-label="PDF: Classical vs Path Coupling on a Geometric State Space">PDF</a>
+            </li>
+            <li class="paper-item">
+              <span class="paper-title">A Pairwise Learning-to-Rank Model for Feature Engineering</span>
+              <a class="paper-pdf" href="research/PWL.pdf" aria-label="PDF: A Pairwise Learning-to-Rank Model for Feature Engineering">PDF</a>
+            </li>
+            <li class="paper-item">
+              <span class="paper-title">Holomorphic Disks and the Top Alexander Grading of Two-Rainbow Knots</span>
+              <a class="paper-pdf" href="research/TRL.pdf" aria-label="PDF: Holomorphic Disks and the Top Alexander Grading of Two-Rainbow Knots">PDF</a>
+            </li>
+          </ul>
+        </section>
 
-          <!-- Replace each pending span with a .paper-pdf link when its file is ready. -->
-          <li class="paper-item paper-item--placeholder">
-            <span class="paper-title">Forthcoming manuscript 01</span>
-            <span class="paper-pdf paper-pdf--pending">PDF forthcoming</span>
-          </li>
-          <li class="paper-item paper-item--placeholder">
-            <span class="paper-title">Forthcoming manuscript 02</span>
-            <span class="paper-pdf paper-pdf--pending">PDF forthcoming</span>
-          </li>
-          <li class="paper-item paper-item--placeholder">
-            <span class="paper-title">Forthcoming manuscript 03</span>
-            <span class="paper-pdf paper-pdf--pending">PDF forthcoming</span>
-          </li>
-          <li class="paper-item paper-item--placeholder">
-            <span class="paper-title">Forthcoming manuscript 04</span>
-            <span class="paper-pdf paper-pdf--pending">PDF forthcoming</span>
-          </li>
-          <li class="paper-item paper-item--placeholder">
-            <span class="paper-title">Forthcoming manuscript 05</span>
-            <span class="paper-pdf paper-pdf--pending">PDF forthcoming</span>
-          </li>
-          <li class="paper-item paper-item--placeholder">
-            <span class="paper-title">Forthcoming manuscript 06</span>
-            <span class="paper-pdf paper-pdf--pending">PDF forthcoming</span>
-          </li>
-          <li class="paper-item paper-item--placeholder">
-            <span class="paper-title">Forthcoming manuscript 07</span>
-            <span class="paper-pdf paper-pdf--pending">PDF forthcoming</span>
-          </li>
-          <li class="paper-item paper-item--placeholder">
-            <span class="paper-title">Forthcoming manuscript 08</span>
-            <span class="paper-pdf paper-pdf--pending">PDF forthcoming</span>
-          </li>
-          <li class="paper-item paper-item--placeholder">
-            <span class="paper-title">Forthcoming manuscript 09</span>
-            <span class="paper-pdf paper-pdf--pending">PDF forthcoming</span>
-          </li>
-          <li class="paper-item paper-item--placeholder">
-            <span class="paper-title">Forthcoming manuscript 10</span>
-            <span class="paper-pdf paper-pdf--pending">PDF forthcoming</span>
-          </li>
-          <li class="paper-item paper-item--placeholder">
-            <span class="paper-title">Forthcoming manuscript 11</span>
-            <span class="paper-pdf paper-pdf--pending">PDF forthcoming</span>
-          </li>
-          <li class="paper-item paper-item--placeholder">
-            <span class="paper-title">Forthcoming manuscript 12</span>
-            <span class="paper-pdf paper-pdf--pending">PDF forthcoming</span>
-          </li>
-        </ul>
+        <section class="paper-group" aria-labelledby="notes-heading">
+          <h2 class="section-title" id="notes-heading">Notes</h2>
+          <ul class="paper-list">
+            <li class="paper-item">
+              <span class="paper-title">Classifying Knotted Surfaces</span>
+              <a class="paper-pdf" href="notes/CKS.pdf" aria-label="PDF: Classifying Knotted Surfaces">PDF</a>
+            </li>
+            <li class="paper-item">
+              <span class="paper-title">Vector Bundles and Holomorphic Structures</span>
+              <a class="paper-pdf" href="notes/DRPS2026.pdf" aria-label="PDF: Vector Bundles and Holomorphic Structures">PDF</a>
+            </li>
+            <li class="paper-item">
+              <span class="paper-title">Geometric Measure Theory</span>
+              <a class="paper-pdf" href="notes/GMT.pdf" aria-label="PDF: Geometric Measure Theory">PDF</a>
+            </li>
+            <li class="paper-item">
+              <span class="paper-title">Khovanov Homology and Exotic Surfaces</span>
+              <a class="paper-pdf" href="notes/KHES.pdf" aria-label="PDF: Khovanov Homology and Exotic Surfaces">PDF</a>
+            </li>
+            <li class="paper-item">
+              <span class="paper-title">Lefschetz Fibrations</span>
+              <a class="paper-pdf" href="notes/LF.pdf" aria-label="PDF: Lefschetz Fibrations">PDF</a>
+            </li>
+            <li class="paper-item">
+              <span class="paper-title">Algebraic Number Theory (MATH4043GU)</span>
+              <a class="paper-pdf" href="notes/MATH4043GU.pdf" aria-label="PDF: Algebraic Number Theory (MATH4043GU)">PDF</a>
+            </li>
+            <li class="paper-item">
+              <span class="paper-title">Algebraic Curves (MATH4045GU)</span>
+              <a class="paper-pdf" href="notes/MATH4045GU.pdf" aria-label="PDF: Algebraic Curves (MATH4045GU)">PDF</a>
+            </li>
+            <li class="paper-item">
+              <span class="paper-title">Analysis II (MATH6152GR)</span>
+              <a class="paper-pdf" href="notes/MATH6152GR.pdf" aria-label="PDF: Analysis II (MATH6152GR)">PDF</a>
+            </li>
+            <li class="paper-item">
+              <span class="paper-title">CA/RS I/II (MATH6176GR)</span>
+              <a class="paper-pdf" href="notes/MATH6176GR.pdf" aria-label="PDF: Complex Analysis and Riemann Surfaces I/II">PDF</a>
+            </li>
+            <li class="paper-item">
+              <span class="paper-title">Mathematics of Generative Models</span>
+              <a class="paper-pdf" href="notes/MGM.pdf" aria-label="PDF: Mathematics of Generative Models">PDF</a>
+            </li>
+            <li class="paper-item">
+              <span class="paper-title">Moduli of Varieties</span>
+              <a class="paper-pdf" href="notes/MV.pdf" aria-label="PDF: Moduli of Varieties">PDF</a>
+            </li>
+            <li class="paper-item">
+              <span class="paper-title">Surfaces and 4-Manifolds</span>
+              <a class="paper-pdf" href="notes/S4M.pdf" aria-label="PDF: Surfaces and 4-Manifolds">PDF</a>
+            </li>
+            <li class="paper-item">
+              <span class="paper-title">Singularities in Commutative Algebra</span>
+              <a class="paper-pdf" href="notes/SING.pdf" aria-label="PDF: Singularities in Commutative Algebra">PDF</a>
+            </li>
+            <li class="paper-item">
+              <span class="paper-title">Symplectic Surfaces</span>
+              <a class="paper-pdf" href="notes/SS.pdf" aria-label="PDF: Symplectic Surfaces">PDF</a>
+            </li>
+            <li class="paper-item">
+              <span class="paper-title">Techniques in Exotica</span>
+              <a class="paper-pdf" href="notes/TE.pdf" aria-label="PDF: Techniques in Exotica">PDF</a>
+            </li>
+            <li class="paper-item">
+              <span class="paper-title">Group Trisections and Smoothly Knotted Surfaces</span>
+              <a class="paper-pdf" href="notes/TWS.pdf" aria-label="PDF: Group Trisections and Smoothly Knotted Surfaces">PDF</a>
+            </li>
+            <li class="paper-item">
+              <span class="paper-title">Whitney Forms</span>
+              <a class="paper-pdf" href="notes/WF.pdf" aria-label="PDF: Whitney Forms">PDF</a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="paper-group" aria-labelledby="projects-heading">
+          <h2 class="section-title" id="projects-heading">Projects</h2>
+          <ul class="paper-list">
+            <li class="paper-item">
+              <span class="paper-title">Fourier Transform on ℝ</span>
+              <a class="paper-pdf" href="projects/MATH4032GUproject.pdf" aria-label="PDF: Fourier Transform on the real numbers">PDF</a>
+            </li>
+            <li class="paper-item">
+              <span class="paper-title">Modular Curves and Mazur–Wiles Theory</span>
+              <a class="paper-pdf" href="projects/MATH4043GUproject.pdf" aria-label="PDF: Modular Curves and Mazur–Wiles Theory">PDF</a>
+            </li>
+            <li class="paper-item">
+              <span class="paper-title">Conway Mutation and the Jones Polynomial</span>
+              <a class="paper-pdf" href="projects/MATH4053GUproject.pdf" aria-label="PDF: Conway Mutation and the Jones Polynomial">PDF</a>
+            </li>
+          </ul>
+        </section>
       </section>
 
       <section class="tab-panel" id="panel-cv" data-panel="cv" hidden>
@@ -794,15 +857,15 @@
           <h2 class="section-title">Talks &amp; conferences</h2>
           <div class="cv-entry">
             <time class="date">Jul 2026</time>
-            <div><span class="entry-title">International Congress of Mathematicians</span><span class="entry-place">International Mathematical Union</span></div>
+            <div><span class="entry-title">International Congress of Mathematicians (T)</span><span class="entry-place">International Mathematical Union</span></div>
           </div>
           <div class="cv-entry">
             <time class="date">Jan 7, 2026</time>
-            <div><span class="entry-title">Joint Mathematics Meetings</span><span class="entry-place">American Mathematical Society</span></div>
+            <div><span class="entry-title">Joint Mathematics Meetings (T)</span><span class="entry-place">American Mathematical Society</span></div>
           </div>
           <div class="cv-entry">
             <time class="date">2026</time>
-            <div><span class="entry-title">Gathering 4 Gardner</span><span class="entry-place">Gathering 4 Gardner Foundation</span></div>
+            <div><span class="entry-title">Gathering 4 Gardner (T)</span><span class="entry-place">Gathering 4 Gardner Foundation</span></div>
           </div>
         </section>
 
@@ -846,7 +909,7 @@
       var aliases = { research: "papers", talks: "cv", reading: "about" };
       var titles = {
         about: "Iz Tecúm",
-        papers: "Papers & Notes — Iz Tecúm",
+        papers: "Research, Notes & Projects — Iz Tecúm",
         cv: "CV — Iz Tecúm"
       };
 
